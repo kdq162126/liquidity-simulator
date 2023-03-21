@@ -1,0 +1,85 @@
+input {
+    display: inline-block;
+    width: 50%;
+    margin: 5px 30px;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header {
+    text-align: center;
+}
+
+.pool-col {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+}
+
+#change-info div p {
+    display: inline-block;
+    margin: 1% 0;
+}
+
+#trade-section {
+    margin-top: 50px;
+    display: none;
+}
+
+.trade-header h4 {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+}
+
+.trade-info {
+    /* display: block; */
+    padding: 2% 0;
+}
+
+.trade-info div {
+    display: inline-block;
+    width: 23.5%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.trade-info .trade-amount input {
+    width: 30%;
+    margin: auto 0;
+}
+
+.trade-amount p {
+    margin: 0;
+    width: auto;
+    display: inline-block;
+}
+
+#add-trade-btn {
+    font-size: 150%;
+    color: green;
+    display: none;
+    width: 4%;
+    text-align: center;
+    margin: auto;
+}
+
+.token1.trade-amount {
+    display: none;
+}
+
+.pool-reverses p {
+    display: inline-block;
+    margin: 0;
+}
+
+#delete-trade-btn {
+    top: 50%;
+    transform: translateY(-50%);
+}

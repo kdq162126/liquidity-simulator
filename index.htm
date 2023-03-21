@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class=" header">Liquidity Simulator</h1>
+
+    <div id="pool-section">
+        <hr>
+        <h3 class="header">Pool Information</h3>
+
+        <div id="token-info" class="pool-col">
+            <h4>Token</h4>
+            <input class="token0 input-box" type="text" placeholder="A">
+            <input class="token1 input-box" type="text" placeholder="B">
+        </div>
+
+        <div id="amount-info" class="pool-col">
+            <h4>Amount</h4>
+            <input id="reverse0" class="input-box" type="text" placeholder="0.00">
+            <input id="reverse1" class="input-box" type="text" placeholder="0.00">
+        </div>
+
+        <div id="change-info" class="pool-col">
+            <h4>Price Changed</h4>
+            <div class="token0">
+                <!-- <p class="amount"></p> -->
+                <p class="percent"></p>
+            </div>
+            <div class="token1">
+                <!-- <p class="amount"></p> -->
+                <p class="percent"></p>
+            </div>
+        </div>
+
+        <button id="create-pool-btn" class="center">Create Pool</button>
+
+    </div>
+
+    <div id="trade-section">
+        <hr>
+        <div>
+            <h3 class="header">Trade Information</h3>
+        </div>
+
+        <div class="trade-header">
+            <h4>Action</h4>
+            <h4>Token 1</h4>
+            <h4>Token 2</h4>
+            <h4>Reverses Liquidity</h4>
+        </div>
+
+        <div class="trade-info">
+            <button id="delete-trade-btn" class="fa fa-trash-o"></button>
+
+            <div class="trade-action">
+                <select name="actions" id="actions">
+                    <option value="swap">Swap Token 1 for Token 2</option>
+                    <!-- <option value="add_lp"> Add Liquidity</option>
+                    <option value="remove_lp">Remove Liquidity</option> -->
+                </select>
+            </div>
+
+            <div class="token0 trade-amount">
+                <input type="text" placeholder="0.00">
+                <select name="tokens" id="tokens">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+            </div>
+
+            <div class="token1 trade-amount">
+                <i class="fa fa-arrow-right" style="font-size:150%;float:left;"></i>
+                <p class="amount"></p>
+                <p class="token"></p>
+            </div>
+
+            <div class="pool-reverses">
+                <p class="token0"></p>
+                <p class="token1"></p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <button id="add-trade-btn" class="fa fa-plus"></button>
+
+    <script src="./main.js" async defer></script>
+
+</body>
+
+</html>
