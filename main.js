@@ -73,6 +73,10 @@ function renderTradeInfo(element, token1, balance1) {
     token1Element.style.display = 'inline-block'
 }
 
+// Update last reverses after trade actions
+// Price change = (1 - K0/K1)
+// K0: Origin tokens ratio in pool
+// K1: Last tokens ratio 
 function renderPriceChange() {
     const tradeInfoList = document.querySelectorAll('.trade-info')
     var lastReverses = new Map([
@@ -80,7 +84,7 @@ function renderPriceChange() {
         [tokens[1], pool.get(tokens[1]).Reverse],
     ])
 
-    // Update Last Reverses Liquidity of Pool
+    // Update Last Reverses Liquidity of Pool by calculate sum of token's amount
     tradeInfoList.forEach(element => {
         const token0_Info = element.querySelector('.token0.trade-amount')
         const token1_Info = element.querySelector('.token1.trade-amount')
@@ -122,6 +126,7 @@ function renderPriceChange() {
 }
 
 // Formula: X*Y = (X+a)*(Y+b) = k       =>      b = (-aY)/(X+a)
+// X, Y are liqudity reverses
 function calBalance1(token0, balance0, token1) {
     console.log(token0, balance0, token1)
     return (-1) * (balance0 * pool.get(token1).Reverse) / (pool.get(token0).Reverse + balance0)
